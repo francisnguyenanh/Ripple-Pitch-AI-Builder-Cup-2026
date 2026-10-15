@@ -103,7 +103,7 @@ Stated as capabilities, not as completion:
 | **Judge guide** (static, read-only) | <https://ripple-guide-636767063018.asia-southeast1.run.app> |
 | One-role guide (Markdown source) | [`docs/judges/SINGLE_ROLE_GUIDE.md`](docs/judges/SINGLE_ROLE_GUIDE.md) |
 | Recorded four-role case (Markdown source) | [`docs/judges/VERIFIED_FOUR_ROLE_CASE.md`](docs/judges/VERIFIED_FOUR_ROLE_CASE.md) |
-| Replay guide for the four-role case | [`docs/judges/FOUR_ROLE_REPLAY_GUIDE.md`](docs/judges/FOUR_ROLE_REPLAY_GUIDE.md) |
+| Assisted four-role replay (on request) and how to follow the recorded case | [`docs/judges/FOUR_ROLE_REPLAY_GUIDE.md`](docs/judges/FOUR_ROLE_REPLAY_GUIDE.md) |
 | Stage-by-stage status of both scenarios | [`docs/release/SCENARIO_STATUS.md`](docs/release/SCENARIO_STATUS.md) |
 
 ### How to experience the prototype
