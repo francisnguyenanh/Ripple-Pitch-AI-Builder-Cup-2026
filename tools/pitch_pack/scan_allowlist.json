@@ -480,5 +480,23 @@
   "path_glob": "README.md",
   "value_regex": "com/francisnguyenanh/Ripple\\-Pitch\\-AI\\-Builder\\-Cup\\-2026",
   "reason": "public GitHub repository path in the quickstart clone command (owner and repository name); contains no credential, token or userinfo"
+ },
+ {
+  "rule": "high_entropy_token",
+  "path_glob": "MANIFEST.json",
+  "value_regex": "ripple/_testdata/0[1]_LANGUAGE_RESEARCH",
+  "reason": "one exact tracked test-data document path under the _testdata folder (first of three), listed in the manifest; a file path, not a credential"
+ },
+ {
+  "rule": "high_entropy_token",
+  "path_glob": "MANIFEST.json",
+  "value_regex": "ripple/_testdata/0[2]_SYSTEM_INSTRUCTION_EN",
+  "reason": "one exact tracked test-data document path under the _testdata folder (second of three), listed in the manifest; a file path, not a credential"
+ },
+ {
+  "rule": "high_entropy_token",
+  "path_glob": "MANIFEST.json",
+  "value_regex": "ripple/_testdata/0[4]_GENERATION_LEDGER",
+  "reason": "one exact tracked test-data document path under the _testdata folder (fourth of three), listed in the manifest; a file path, not a credential"
  }
 ]

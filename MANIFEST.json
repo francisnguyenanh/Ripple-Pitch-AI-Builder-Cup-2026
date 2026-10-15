@@ -1,7 +1,7 @@
 {
  "source_commit": "8d5523264ed1c9b4ebfdfa0dea0d621f5114dd05",
- "file_count": 1072,
- "overall_sha256": "8d540a1eb292cae45c6d6c446a099f946b4b432081403df037b81859cbc797fb",
+ "file_count": 1075,
+ "overall_sha256": "4a491ac167b3de2248580854bd41dc6aeef71b4cc02e626382190f0d07d36694",
  "image_digest": "TBD",
  "files": [
   {
@@ -1335,6 +1335,12 @@
    "size": 8602,
    "sha256": "906481478fd9a322a993be35ef5bbe448613a76feb112418bc0d87e48aadaf1e",
    "sha256_lf": "1b9cc0e112ebf92ab61a89668fe20cfd20b38dc2e669dc73f45503390bb10458"
+  },
+  {
+   "path": "docs/release/REPLAY_EVIDENCE.md",
+   "size": 2223,
+   "sha256": "14721e8f08f5b33136b2ed1d33202e81794c4a61faba66ace52915f3d95977a4",
+   "sha256_lf": "14721e8f08f5b33136b2ed1d33202e81794c4a61faba66ace52915f3d95977a4"
   },
   {
    "path": "docs/release/SCENARIO_STATUS.md",
@@ -5674,6 +5680,18 @@
    "sha256_lf": "337ee031f788e77b12ebe8f15965234adb7ff2665bbdd39fae0bf51e60a1e5a5"
   },
   {
+   "path": "tests/pitch_brief/test_replay_decision_scope.py",
+   "size": 2148,
+   "sha256": "3e5d65cba0edab31cb8a20126c00c0ff7b7f5a6c172dea0cbb828f51aac44a2d",
+   "sha256_lf": "5f762f3a08373c90740086784f5fdd0175c027bc297c595631026b7658439bee"
+  },
+  {
+   "path": "tests/pitch_brief/test_replay_roles_without_admin.py",
+   "size": 18388,
+   "sha256": "37f6cc5a605fdab16ad67962236b3ab779c9fb2a71bf156f083f5ae5c7da888b",
+   "sha256_lf": "bb630412ead53bdef2b0be9a6e9332b4b9acfa6fe366417fc2c4356f5df5787e"
+  },
+  {
    "path": "tests/pitch_brief/test_response_scoping.py",
    "size": 7679,
    "sha256": "50366e7d3862abf87063b57c976ae708bdecbf3f42c604d1cdff6c5f48319160",
@@ -6377,9 +6395,9 @@
   },
   {
    "path": "tools/pitch_pack/scan_allowlist.json",
-   "size": 23867,
-   "sha256": "600869c51cc15dc0e77bf3be8a0809d08b9ca01810c2e602ff1e970ccb829691",
-   "sha256_lf": "96d18f833002c7c9eead8464cbffa6e8fba51c2d3cd10292562c6a24e3043689"
+   "size": 24749,
+   "sha256": "dfb0408f8d9fe6caed4a4c65125f2d7cb6b8bca36289e8512c6e65a00a42fe04",
+   "sha256_lf": "8b6589fa35353a2b4c021c2aca87b913dbac5740e82dc897f5b9dd055e174d55"
   },
   {
    "path": "tools/release_pack/__init__.py",

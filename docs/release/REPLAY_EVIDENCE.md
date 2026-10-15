@@ -1,0 +1,12 @@
+# Offline evidence for the planned four-role workflow
+
+**Status: the four-role workflow is not available to judges.** This page records offline regression evidence only. It is not a live run, not human acceptance, and it says nothing about cloud cost, quota or readiness of any workspace.
+
+Both tests run on a disposable local PostgreSQL with stub providers (no cloud, no AI call). They need `PITCH_BRIEF_TEST_DSN` and, for the browser test, `UI_BASE=app-next`. Without them the tests are skipped, and a skip is not a pass.
+
+| Test | What it shows | What it does not show |
+|---|---|---|
+| `tests/pitch_brief/test_replay_roles_without_admin.py` | One change goes through **requester, reviewer, approver and knowledge owner** (no administrator, no restore operator): approver states the check, requester runs the review and the approval bundle, reviewer's open request blocks approval, approver approves, requester alone applies, verification and the re-read run, the knowledge owner accepts the knowledge (again after a new decision), the approver decides the result item by item. For all four roles, the operator switches, membership grants and restore approvals are refused (HTTP 403) and the pages offer no such control. | Real model quality, real cost, or any deployed environment. The open-point decision is covered by the second test, not by this journey. |
+| `tests/pitch_brief/test_replay_decision_scope.py` | Only a knowledge owner can confirm an open-point decision (requester, reviewer and approver get 403). The decision belongs to the request it was made for: a new request does not inherit it, and a draft pinned before the decision does not use it. | That an earlier answer is useful for a later request: it is not reused, and a person confirms again if it is still wanted. |
+
+Related existing tests, unchanged: `tests/ai8t04/test_refresh_and_sequential.py` (a second change reads the actual head; an approval cannot be replayed after the head moved), `tests/ai8t03/test_rebuild_and_recovery.py` (after an apply, a decision is carried only when its evidence binding is still valid; otherwise it is reopened), `tests/ai5t04/test_confirm_publish_knowledge.py` (knowledge owner confirms and accepts knowledge).
