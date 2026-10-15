@@ -377,8 +377,8 @@ The repository is currently **private**: cloning needs GitHub access that has be
 PowerShell:
 
 ```powershell
-git clone https://github.com/francisnguyenanh/Ripple-phase-1.git
-cd Ripple-phase-1
+git clone https://github.com/francisnguyenanh/Ripple-Pitch-AI-Builder-Cup-2026.git
+cd Ripple-Pitch-AI-Builder-Cup-2026
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements-dev.txt
@@ -389,7 +389,7 @@ python -m tools.judge_local.run_local
 POSIX shell:
 
 ```bash
-git clone https://github.com/francisnguyenanh/Ripple-phase-1.git && cd Ripple-phase-1
+git clone https://github.com/francisnguyenanh/Ripple-Pitch-AI-Builder-Cup-2026.git && cd Ripple-Pitch-AI-Builder-Cup-2026
 python3.11 -m venv .venv && source .venv/bin/activate
 python -m pip install -r requirements-dev.txt
 docker run -d --name ripple-pg -e POSTGRES_PASSWORD=localtest -p 127.0.0.1:55831:5432 postgres:16
@@ -476,7 +476,7 @@ Use a freshly created, empty database: a few tests assume no earlier accounts ex
 | same | collection (`python -m pytest --collect-only`) | 3,539 tests selected, 1 deselected (live-model marker) |
 | `687d03c`, clean clone (earlier package pass) | database-backed groups; non-database groups; 11 browser tests; clean-clone image build and frontend rebuild | 415 passed / 2 skipped; 2,230 passed / 3 skipped; 11 passed; build and byte-identical bundle (details in [`docs/release/PACKAGE_PROVENANCE.md`](docs/release/PACKAGE_PROVENANCE.md)) |
 
-The snapshot ids in this table belong to the earlier history of this repository, which was replaced by a single root commit on 2026-10-15 (see [`docs/release/PACKAGE_PROVENANCE.md`](docs/release/PACKAGE_PROVENANCE.md)); a CLI run on `357e026` (Python 3.14.2, `tests/contract` + `tests/unit`: 1,166 passed, 3 skipped, 1 deselected; time approximate; exit code, log and skip reasons were not recorded) is not added to the rows above. Earlier results belong to their snapshot; they are not results of later documentation commits. **SKIP and deselected** tests are the live-model tests (a real provider call, opt-in with `-m live_llm`), tests needing a database or browser that was not provided, and tests that need operator-only files that are not shipped. The held-out AI evaluation harness is not part of the routine suites.
+The snapshot ids in this table belong to an earlier private repository that is kept as an archive and is not part of this one (see [`docs/release/PACKAGE_PROVENANCE.md`](docs/release/PACKAGE_PROVENANCE.md)); a CLI run on `357e026` (Python 3.14.2, `tests/contract` + `tests/unit`: 1,166 passed, 3 skipped, 1 deselected; time approximate; exit code, log and skip reasons were not recorded) is not added to the rows above. Earlier results belong to their snapshot; they are not results of later documentation commits. **SKIP and deselected** tests are the live-model tests (a real provider call, opt-in with `-m live_llm`), tests needing a database or browser that was not provided, and tests that need operator-only files that are not shipped. The held-out AI evaluation harness is not part of the routine suites.
 
 ---
 
