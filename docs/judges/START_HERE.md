@@ -7,11 +7,14 @@ Ripple keeps a company's rules consistent when one of them changes. It reads the
 ## What am I testing?
 That a plain-language change request becomes a checked, grounded proposal - and that Ripple does **not** hide what it could not resolve. You test one rule of a procurement system: the **standard manager approval threshold**.
 
-## Suggested route
+> **Starting point.** This walkthrough uses a specific starting baseline. If earlier changes have been applied in this workspace, the sample values and expected results may no longer match. Check the current source revision and values before starting. For subsequent runs, follow the same workflow using the latest data.
+
+## Three ways to evaluate
 <ol class="route">
 <li><strong>Understand Harbor</strong> - the system and its 13 analysed files (below).</li>
-<li><strong>Try the one-role demo</strong> - raise a manager threshold yourself. <a href="one-role-guide.html">Open the one-role guide</a>.</li>
-<li><strong>Review the recorded four-role case</strong> - what four people did with a different rule (CAPEX). <a href="four-role-case.html">Open the recorded case</a>.</li>
+<li><strong>Try the one-role demo - recommended.</strong> Raise a manager threshold yourself with a judge account and stop at a proposal that waits for an approver. <a href="one-role-guide.html">Open the one-role guide</a>.</li>
+<li><strong>Run the four-role workflow - optional, not yet available.</strong> A hands-on run through review, approval and apply is planned for a separate workspace; it is offered only once that environment is set up and checked. <a href="four-role-replay.html">What it will involve</a>.</li>
+<li><strong>Read the recorded four-role case - read-only evidence</strong> of a past run, with its own rule (CAPEX) and baseline. <a href="four-role-case.html">Open the recorded case</a>.</li>
 </ol>
 
 You can also read the recorded case first. The two scenarios use **different rules, baselines and runs**; their numbers, screenshots and evidence are never mixed.
@@ -76,4 +79,4 @@ Coverage is the subset above, not the whole of Harbor and not a whole company: H
 - Availability of the AI steps is limited to the evaluation window: @@WINDOW@@
 
 ## Supporting references
-[Replay guide for the recorded case](FOUR_ROLE_REPLAY_GUIDE.md) · repository documents under `docs/judges/` (the source of these pages) · this site is read-only documentation and calls no Ripple API.
+[Four-role workflow (not yet available) and how to follow the recorded case](FOUR_ROLE_REPLAY_GUIDE.md) · repository documents under `docs/judges/` (the source of these pages) · this site is read-only documentation and calls no Ripple API.

@@ -23,6 +23,10 @@ Harbor sends a standard purchase requisition to a **manager** only above a thres
 Act as a requester. State the change in plain words, make Ripple restate it, confirm it, and take it to a **proposal that waits for a reviewer and an approver**. You never apply anything.
 
 ## Baseline
+> **Starting point.** This walkthrough uses a specific starting baseline. If earlier changes have been applied in this workspace, the sample values and expected results may no longer match. Check the current source revision and values before starting. For subsequent runs, follow the same workflow using the latest data.
+
+This guide does **not** apply anything (a judge cannot), so following it never changes the source. The values here are the **guided example**. If the value you read in the Explorer is no longer 500,000, keep the same workflow, use the value you read as the "current value" in your request and a new value you choose; the simulation and the AI's wording will then differ from the example, which is expected.
+
 - <span class="tag t-live">Recorded live result</span> `standard_manager_threshold_jpy` = **500,000**, `capex_finance_threshold_jpy` = 1,000,000 (read on 2026-10-13 through the AI's comparison with stored rules and the simulation's baseline check, and re-read before the exact-request check).
 - <span class="tag t-lim">Limitation</span> The statements in `workflow.yaml` and `procurement_policy.md` (1,000,000) come from the Harbor bundle copy of those files, not from a fresh live read.
 - Before you start, the page re-checks the baseline; if the workspace has moved, trust the numbers on screen.
