@@ -1,7 +1,7 @@
 {
  "source_commit": "8d5523264ed1c9b4ebfdfa0dea0d621f5114dd05",
  "file_count": 1072,
- "overall_sha256": "8e0e68cf4271282955456a2f9338eeafeba6c3560dfa2c72c71666118ba45f9d",
+ "overall_sha256": "2ecc6eb7f1707f3d61a2cf61b7462b452192bc2ee1d31e0038b63c1c35e63efa",
  "image_digest": "TBD",
  "files": [
   {
@@ -1235,9 +1235,9 @@
   },
   {
    "path": "docs/judges/SINGLE_ROLE_GUIDE.md",
-   "size": 11192,
-   "sha256": "d65f1c64e046700de614bdd2e39f53ff1133eecc8d83ee273e3b9b5029b34c6d",
-   "sha256_lf": "6ad7aa74023b07fe66441f072ad87c1455125dd86fee9915faf5fdbfe3339dfb"
+   "size": 13838,
+   "sha256": "d377b57b7fe7580a38fb7734ebbd76f2de6209c4a889f90ea7fd8b61b221cc14",
+   "sha256_lf": "1ea373951c8a61fed3590eb7a0f77e3deb15d3f514f47b1b58e9c0de4e923353"
   },
   {
    "path": "docs/judges/START_HERE.md",
@@ -4290,9 +4290,9 @@
   },
   {
    "path": "site/judges/one-role-guide.html",
-   "size": 19783,
-   "sha256": "6424f9480e3dd8c0dc3d9bfccaabde5b5df70bd4b88208f114fdda269df5225d",
-   "sha256_lf": "8bdd488379c1e3d7f2e1f303796b9bb1e29af826d736a87dccf4b8fb144e8130"
+   "size": 22958,
+   "sha256": "6f0d4aad17a8c4b6d8c0e3a31431564d41d16e9129e37f1de752940ce274080b",
+   "sha256_lf": "42c643f9349ede57f7093b6207fb30af913ff3ec5aa0e8623356484fb68b58a8"
   },
   {
    "path": "site/judges/site.js",

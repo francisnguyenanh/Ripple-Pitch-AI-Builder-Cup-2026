@@ -46,24 +46,27 @@ Each card shows what to do and what to expect. Open **Observed result, evidence 
 
 ### Step 1 - Open Ripple and choose a change
 - **Role:** judge (requester-like). **AI:** no.
-- **Action** <span class="tag t-judge">Judge action</span>: open Ripple (button at the top), sign in with the judge account you were given, pick the workspace, open **Changes**.
-- **Expected:** "No change is selected" and your My work list (a chooser).
+- **Action** <span class="tag t-judge">Judge action</span>: open Ripple (button at the top), sign in with the judge account you were given, pick the workspace, then in the left menu open **Changes**. To start a **new** conversation arrive at **Changes from another page** (for example Overview, then Changes): there is no "New request" button, and clicking **Changes** while you are already on it only reloads the change that is open.
+- **Expected:** the page shows "No change is selected" and your My work list (a chooser); the card **1. Request and confirmation** has an empty chat box and **Send**; there is no **Where this change is** card and no **Your request** card.
+- **Continue when:** the address ends with `#/ws/<workspace>/changes` (no `chat=`, `intent=` or `draft=`). If an older change is shown, go to another page and back to **Changes**. Do not use **Open** in My work: it reopens an existing change.
+- **Optional check of the baseline:** left menu → **Explorer** → type `approval.yaml` in **Search** → open the file, then the rule about the standard manager threshold. Recognise it by **Taken from: approval.yaml** and **Value** (500,000 expected), not by its name, which the AI chose and may differ. Quotes under "Where it came from" are hidden for a judge by design.
 - **Observed** <span class="tag t-live">Recorded live result</span>: chooser visible on first load.
 - **Caveat** <span class="tag t-lim">Limitation</span>: if AI steps are refused with "evaluation window", the service is not open; nothing is charged.
 
 ### Step 2 - Type the request and read the preview
 - **Role:** judge. **AI:** yes, one metered reply.
-- **Action** <span class="tag t-judge">Judge action</span>: copy the request above, paste it into the chat box and press **Send**.
+- **Action** <span class="tag t-judge">Judge action</span>: copy the request above, paste it into the chat box and click **Send** (Enter in the box also sends at once; Shift+Enter adds a line).
 - **Expected:** a card "This is what I understood": subject = standard manager approval threshold, current 500,000, new 800,000, JPY; the first line says nothing is recorded until you confirm.
 - **Observed** <span class="tag t-live">Recorded live result</span>: exact request → READY card in about 18 s (worker already warm); the earlier, different request needed about 41 s including a cold worker start and two clarifications.
 - **Caveat** <span class="tag t-lim">Limitation</span>: the "limit this change to approval.yaml" sentence is **recorded only, not enforced**.
-- **If the AI asks a question:** answer with real data (for example "The current value is 500,000 JPY"). Do not restate a value you have not checked. Each reply is metered.
-- **Fallback:** if the AI cannot settle it, **Edit the details myself** → current 500000, new 800000 → **Check my edits**. Deterministic, no AI; a fallback, not the intended path.
+- **Continue when:** the card heading is "This is what I understood" and current/new values read 500,000 and 800,000. Check the "from your words" lines under each value.
+- **Optional branches (not the main path; each AI reply is metered):** if the heading is "I still need some details", answer with real data (for example "The current value is 500,000 JPY") in the **Your answer** box. If the AI cannot settle it, **Edit the details myself** → current 500000, new 800000 → **Check my edits** is deterministic (no AI) but is a fallback, not the intended path.
 
 ### Step 3 - Confirm
 - **Role:** judge. **AI:** no.
-- **Action** <span class="tag t-judge">Judge action</span>: tick the acknowledgement, **Yes, this is what I mean**, then **Confirm intent**.
-- **Expected:** a saved request; stage 1 shows done.
+- **Action** <span class="tag t-judge">Judge action</span>: two separate confirmations. (1) In the chat card click **Yes, this is what I mean**; a check box ("I have checked what the AI assumed and what is left out of this request") appears **only** when the AI listed assumptions or "not covered" items, and then must be ticked first. (2) The saved request has the status "Saved - waiting for the person who made it to confirm the request"; click **Confirm intent** in stage 1.
+- **Expected:** after (1) a **Your request** card and a **Where this change is** card appear; after (2) stage 1 shows **Confirmed**.
+- **Continue when:** the status reads **Confirmed**.
 - **Observed** <span class="tag t-live">Recorded live result</span>: preview confirmed (exact request, conversation CONFIRMED). **Confirm intent** and later steps come from the earlier run: confirmed within seconds.
 
 ### Step 4 - Generate the draft
@@ -71,7 +74,9 @@ Each card shows what to do and what to expect. Open **Observed result, evidence 
 - **Action** <span class="tag t-judge">Judge action</span>: stage 2 *AI draft with citations* → **Generate GenAI draft**.
 - **Expected:** PARTIAL or COMPLETE; **one supported edit** (500,000 → 800,000); open points listed; no raw source text for your role.
 - **Observed** <span class="tag t-live">Recorded live result</span> (earlier run): 15 s; PARTIAL; one edit; open items for `approval_matrix.xlsx` (shown as **potentially affected**), `workflow.yaml`, `procurement_policy.md`, `requisition_sop.md`.
+- **Continue when:** the status reads Done, and one "Proposed edit" for `approval.yaml` shows 500000 → 800000. PARTIAL is expected: it means some parts stay with people.
 - **Check:** nothing that the AI left out disappears; each open item has a kind (unresolved, potentially affected, outside this request).
+- **Optional paths (not needed for the main path; each can use more AI):** **Revise this draft with confirmed feedback**, **Ask the AI to suggest** (per open point) and, in stage 3, **Ask the AI to look at up to 3 files**.
 - **Caveat** <span class="tag t-nv">Not yet verified</span> with the exact request.
 
 ### Step 5 - Impact and simulation
@@ -89,14 +94,15 @@ Each card shows what to do and what to expect. Open **Observed result, evidence 
 
 ### Step 7 - Build the proposal
 - **Role:** judge. **AI:** no.
-- **Action** <span class="tag t-judge">Judge action</span>: stage 4 → tick the proposed edit → **Prepare the proposal with the ticked edits**.
+- **Action** <span class="tag t-judge">Judge action</span>: stage 4 → check that the `approval.yaml` line is ticked (proposed edits are ticked by default; clicking a ticked line un-ticks it) → **Prepare the proposal with the ticked edits**. One proposal covers one file; press it once.
 - **Expected:** the exact diff of `approval.yaml`; "Left for people" lists the open items (not resolved by the proposal).
 - **Observed** <span class="tag t-live">Recorded live result</span>: 5 s (earlier run).
 
 ### Step 8 - Stop: waiting for the approver
 - **Role:** judge. **AI:** no.
-- **Action:** none - read who is next.
-- **Expected:** My work shows "Needs the check that must hold after the change - an approver (not the requester)". No review, approve or apply button is offered.
+- **Action:** none - read who is next, on the same Changes page.
+- **Expected:** the **Next** card at the top reads "Waiting for: An approver (not the requester) must state the check after the change"; row **5. Check after the change** in **Where this change is** says Waiting; stage 5 shows "Suggested check (waiting for an approver)". My work lists the same item. No review, approve or apply button is offered.
+- **Continue when:** nothing more for a judge. The proposal is **not applied**; the source file is unchanged.
 - **Observed** <span class="tag t-live">Recorded live result</span>: exactly that (earlier run). **End of the guide.** To see what happens after a proposal, read the [recorded four-role case](VERIFIED_FOUR_ROLE_CASE.md) (a different change with its own baseline).
 
 ## How to verify, independent of the AI's wording
