@@ -474,5 +474,11 @@
   "path_glob": "core/kernel/viewmodel/views.py",
   "value_regex": "[0-9A-Za-z_.]+",
   "reason": "file name of an internal plan document named in a docstring"
+ },
+ {
+  "rule": "high_entropy_token",
+  "path_glob": "README.md",
+  "value_regex": "com/francisnguyenanh/Ripple\\-Pitch\\-AI\\-Builder\\-Cup\\-2026",
+  "reason": "public GitHub repository path in the quickstart clone command (owner and repository name); contains no credential, token or userinfo"
  }
 ]
