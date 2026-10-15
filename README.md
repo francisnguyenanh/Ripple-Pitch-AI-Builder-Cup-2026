@@ -12,7 +12,8 @@ Ripple can be judged without running the whole journey. Times are suggestions, n
 |---|---|
 | **Working prototype** (Google Cloud Run) | <https://pitchrc---ripple-s6pcepa2cq-as.a.run.app/app-next/> (sign in with the judge account from the submission materials) |
 | **Judge guide** (static, read-only) | <https://ripple-guide-636767063018.asia-southeast1.run.app> |
-| **Deck / video** | to be linked here once the final versions are approved |
+| **Demo video** | [Watch the demo video](https://www.youtube.com/watch?v=oSsEhUaO9do) |
+| **Deck** | to be linked here once the final version is approved |
 
 1. **Understand the problem and Harbor** (reading only, no AI). [Product introduction](#1-product-introduction) and the [judge guide](docs/judges/START_HERE.md): Harbor is a synthetic procurement system in which one approval rule is written in configuration, policy and spreadsheet at once.
 2. **Try the AI understanding** (**calls the AI**). In the prototype open **Changes**, paste the request from [the one-role guide](docs/judges/SINGLE_ROLE_GUIDE.md#the-request-to-type) and press **Send**. Read the card "This is what I understood" and, if it is right, confirm it (confirming does not call the AI). **You may stop at this preview**; you do not need to run the later steps to judge the AI's understanding.
@@ -534,6 +535,7 @@ The prototype runs on Google Cloud:
 
 ## 13. Submission and third-party information
 
+- Demo video: <https://www.youtube.com/watch?v=oSsEhUaO9do>
 - Judge guide: <https://ripple-guide-636767063018.asia-southeast1.run.app> · prototype: <https://pitchrc---ripple-s6pcepa2cq-as.a.run.app/app-next/>. The prototype is the primary way to evaluate Ripple; the documentation supplements the working prototype and does not replace it.
 - Verification records: [`docs/release/`](docs/release) (claims, scenario status, package provenance) and [`docs/README.md`](docs/README.md).
 - Credentials are provided separately in the submission materials. No password, token, cookie, connection string or private identifier is in this repository; sample data is synthetic or public.
