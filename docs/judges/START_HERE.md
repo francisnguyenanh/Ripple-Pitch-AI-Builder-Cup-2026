@@ -13,7 +13,7 @@ That a plain-language change request becomes a checked, grounded proposal - and 
 <ol class="route">
 <li><strong>Understand Harbor</strong> - the system and its 13 analysed files (below).</li>
 <li><strong>Try the one-role demo - recommended.</strong> Raise a manager threshold yourself with a judge account and stop at a proposal that waits for an approver. <a href="one-role-guide.html">Open the one-role guide</a>.</li>
-<li><strong>Optional: an assisted four-role replay - available on request.</strong> A hands-on run through review, approval and apply is not self-service and this guide gives no accounts for it; ask the team if you want one. <a href="four-role-replay.html">What it involves</a>.</li>
+<li><strong>Four-role workflow - optional.</strong> Do it yourself with the four accounts you receive separately (Requester, Approver, Reviewer, Admin): request, review, approval, apply. It runs on the same workspace and <strong>edits the stored source</strong>, so values and history change for later visitors; it also has current limits (re-reading after an apply and "ask again" depend on the allocation left). <a href="four-role-replay.html">Open the four-role guide</a>.</li>
 <li><strong>Read the recorded four-role case - read-only evidence</strong> of a past run, with its own rule (CAPEX) and baseline. <a href="four-role-case.html">Open the recorded case</a>.</li>
 </ol>
 
@@ -74,9 +74,10 @@ Coverage is the subset above, not the whole of Harbor and not a whole company: H
 - The AI can ask for clarification or **abstain**; that is a correct outcome, not an error.
 - A judge account can read and prepare, but cannot import sources, run extraction or re-extraction, review, approve or apply. Raw source quotes are hidden for this role by design.
 - People sharing one judge account share its chats, My work, history and AI quota. Everyone in the workspace can read the workspace's stored jobs and history.
-- Each conversation allows at most 6 AI turns and each judge account at most 12 AI jobs per day. These are ceilings, not promises: the AI budget is shared by everyone, so when it (or the evaluation window, or the processing capacity set aside for it) is used up, Ripple refuses new work at once with a clear message and nothing is charged.
+- Each conversation allows at most 6 AI turns and each account at most 12 AI jobs per day. These are ceilings, not promises: the AI budget is shared by everyone, so when it (or the evaluation window, or the processing capacity set aside for it) is used up, Ripple refuses new work at once with a clear message and nothing is charged.
+- The optional four-role workflow uses four other accounts (Requester, Approver, Reviewer, Admin) on the **same workspace**: an apply edits the stored source for everyone after you, and the Admin account can switch AI and job processing off **for every user of the service** until it is switched on again (the four-role guide explains how). Check the current value before you start any run.
 - The first AI step after a quiet period can take about a minute because the processing worker starts on demand.
 - Availability of the AI steps is limited to the evaluation window: @@WINDOW@@
 
 ## Supporting references
-[Assisted four-role replay (on request) and how to follow the recorded case](FOUR_ROLE_REPLAY_GUIDE.md) · repository documents under `docs/judges/` (the source of these pages) · this site is read-only documentation and calls no Ripple API.
+[Four-role workflow (optional) and how to follow the recorded case](FOUR_ROLE_REPLAY_GUIDE.md) · repository documents under `docs/judges/` (the source of these pages) · this site is read-only documentation and calls no Ripple API.

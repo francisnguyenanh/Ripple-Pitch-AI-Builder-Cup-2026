@@ -1,7 +1,7 @@
 {
  "source_commit": "8d5523264ed1c9b4ebfdfa0dea0d621f5114dd05",
  "file_count": 1076,
- "overall_sha256": "4b1e4ce7c09749ad9aa3d45f545f2956921f95131901ac5317d74ffe09f84b5f",
+ "overall_sha256": "90866dd205d8b65a92d693ab2eb6358bcaa0638c06cb1ab4c70fed3fa0017d7c",
  "image_digest": "TBD",
  "files": [
   {
@@ -1229,21 +1229,21 @@
   },
   {
    "path": "docs/judges/FOUR_ROLE_REPLAY_GUIDE.md",
-   "size": 4186,
-   "sha256": "e4f806873309df77f64f4057a456c72b780ffe1a07cd0ba40a54bf37e8f1f5fb",
-   "sha256_lf": "e4f806873309df77f64f4057a456c72b780ffe1a07cd0ba40a54bf37e8f1f5fb"
+   "size": 12151,
+   "sha256": "121ae7e67aad8715168757dbb99ef40206c2fc180c882e41736e080c848570d8",
+   "sha256_lf": "121ae7e67aad8715168757dbb99ef40206c2fc180c882e41736e080c848570d8"
   },
   {
    "path": "docs/judges/SINGLE_ROLE_GUIDE.md",
-   "size": 14572,
-   "sha256": "7dbede10ffa3f62f1b690d34e510633a3fbeb2c27a09d37df60cb78407f7add4",
-   "sha256_lf": "ed987f7116b4f7538cf24d129da5498b3c1a7a7bd519c1b18487f6a1c686c46f"
+   "size": 16950,
+   "sha256": "1f53b304ebc356c6cf10cef8fd8617f4d60e5bd51a4d9421f646c6d7f471e9a7",
+   "sha256_lf": "df0c60d5ef1dd99730d298bf8985a56638bd84962e8e2b9c1dcb088b69e20693"
   },
   {
    "path": "docs/judges/START_HERE.md",
-   "size": 7771,
-   "sha256": "6073f15189300b46427c715dc07d7369e76e8e312e9e0d9df06829cc2f2d5d45",
-   "sha256_lf": "4e7cf0e6d4b459372bde5472d7c1a78f2952a52bc244ad18ee6dba7062f40a3a"
+   "size": 8345,
+   "sha256": "625802e1d82cde5c93ce1ce3c395c3fab47e3bf1a58ecf532770234f2051dcaa",
+   "sha256_lf": "dc17419e759586021c7e21702ffcda293c4f823576b4705741a15a2bbd916cb5"
   },
   {
    "path": "docs/judges/VERIFIED_FOUR_ROLE_CASE.md",
@@ -1338,9 +1338,9 @@
   },
   {
    "path": "docs/release/REPLAY_EVIDENCE.md",
-   "size": 2710,
-   "sha256": "9a28c522035b638e27deaa29a95c46b69eaa915fe5d351fb88fe7ac7a7722f06",
-   "sha256_lf": "9a28c522035b638e27deaa29a95c46b69eaa915fe5d351fb88fe7ac7a7722f06"
+   "size": 2745,
+   "sha256": "6be2bc76a11dae84104781ebaaa37424c1a4c910fb76f418bd1f1b04e98de746",
+   "sha256_lf": "6be2bc76a11dae84104781ebaaa37424c1a4c910fb76f418bd1f1b04e98de746"
   },
   {
    "path": "docs/release/SCENARIO_STATUS.md",
@@ -2880,9 +2880,9 @@
   },
   {
    "path": "README.md",
-   "size": 56309,
-   "sha256": "fc513fb3a2380cddb50e1c8382a70ff73229f8d89a661699442eae99539d8196",
-   "sha256_lf": "87a644772912646491598e466e8f3c9c44c726fd74d5d1b81672e982548a38d5"
+   "size": 56330,
+   "sha256": "915a65c3ebbcf080fcd947757c64e0e84d2b8007e751854cac95581325f9d43f",
+   "sha256_lf": "ed1b6e830d044bc29a69bb1272b96a7ec7a7339e8236c57608373c56814720f2"
   },
   {
    "path": "reference_system/__init__.py",
@@ -4269,9 +4269,9 @@
   },
   {
    "path": "site/judges/four-role-replay.html",
-   "size": 6501,
-   "sha256": "90437f964582ad9481bbfd9c0feb7447c4c03565fd2c670ca743abff13d74a57",
-   "sha256_lf": "7b5f76c8ba3e725f6666e78986e865da2d0e0718b918f18cfed98a8a0723a3a5"
+   "size": 16334,
+   "sha256": "783cf06620c516666d7db42b49caf304f9625ed0d942f6b98effec63e317895e",
+   "sha256_lf": "83d6b76793d877319bdc2071ede93e89836f630b3a254c7f8317f17d363df953"
   },
   {
    "path": "site/judges/img/ask_again_abstained.png",
@@ -4290,15 +4290,15 @@
   },
   {
    "path": "site/judges/index.html",
-   "size": 14061,
-   "sha256": "ed3a88556d086565cc52ccc9dc2b659c01bbf1f0ba58d3c1202c6eae6af19da2",
-   "sha256_lf": "b50241eb84ea23776d72780d8f116e9b380c7ef292dca3af551d23c231ef5fe2"
+   "size": 14668,
+   "sha256": "120818f32722444640cf483ed4cc1caba7c11c6832167585c257b9a62ff27daf",
+   "sha256_lf": "9e8282a65224cd6d1c6ca441b53da1c4bd21c662bc5d94d744ad82229c53aa21"
   },
   {
    "path": "site/judges/one-role-guide.html",
-   "size": 23768,
-   "sha256": "772e5a9af99ad6cd115fa2b694ff548c9e57ac30ed89483fd5825c358b244b82",
-   "sha256_lf": "cc708d4e65271a19a671963976ae29a66c6c53894f6faf955099e466411ca97a"
+   "size": 26349,
+   "sha256": "300466f48ab2ca23eb54761cd7df15eb2fe3fb6d705363989fb1c3dade8302f8",
+   "sha256_lf": "4151e15eab41665bad72bdc5a27d894bbad36cc4fb95d700237b424a93d15af2"
   },
   {
    "path": "site/judges/site.js",

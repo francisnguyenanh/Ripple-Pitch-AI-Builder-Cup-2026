@@ -3,57 +3,173 @@
 <title>Supporting: replay guide - Ripple judge guide</title><meta name="robots" content="noindex"><link rel="stylesheet" href="style.css"><script src="site.js" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <header><strong>Ripple - judge guide</strong><nav aria-label="Guide"><a href="index.html">Start here</a><a href="one-role-guide.html">A. Try it yourself</a><a href="four-role-case.html">B. Recorded four-role case</a><a href="four-role-replay.html" aria-current="page">Supporting: replay guide</a></nav><a class="btn" href="https://pitchrc---ripple-s6pcepa2cq-as.a.run.app/app-next/" target="_blank" rel="noopener noreferrer">Open Ripple <span class="ext">(opens in a new tab)</span></a></header>
-<main id="main"><h1>Four-role replay (optional) - available on request</h1>
+<main id="main"><h1>Four-role workflow (optional): do it yourself with four accounts</h1>
 <blockquote>
 <p><strong>Starting point.</strong> This walkthrough uses a specific starting baseline. If earlier changes have been applied in this workspace, the sample values and expected results may no longer match. Check the current source revision and values before starting. For subsequent runs, follow the same workflow using the latest data.</p>
 </blockquote>
-<p><strong>Status: assisted, on request.</strong> A hands-on four-role run (request, review, approval, apply) is <strong>not self-service</strong>. This guide does not give you accounts for it and nothing on this page lets you start it. If you want one, ask the team; it is arranged separately, and the one-role demo is not used for it.</p>
-<p>Your main path stays the <a href="one-role-guide.html">one-role demo</a> (recommended). To see what four people did, read the <a href="four-role-case.html">recorded case</a> (read-only evidence of a past run, with its own rule and baseline).</p>
-<h2>What an assisted replay involves</h2>
-<p>Four different people take one change from request to an applied change:</p>
+<p>You switch between <strong>four accounts that you receive separately</strong> (never written in this guide): a <strong>Requester</strong>, an <strong>Approver</strong>, a <strong>Reviewer</strong> and an <strong>Admin</strong> account. They all work in the <strong>same workspace as the one-role demo</strong>, on the same system. Applying a change here <strong>edits the stored source file</strong>, so the starting value, the history and the results change for everyone who comes after you. That is accepted and expected: read the current value first (Part II).</p>
+<p>Your recommended path is still the <a href="one-role-guide.html">one-role demo</a>. The <a href="four-role-case.html">recorded case</a> is the read-only evidence of an earlier run of this same workflow (a different rule and baseline).</p>
+<h2>Current limits of this deployment (read on 2026-10-16, server side; they can change)</h2>
+<ul>
+<li><strong>Re-reading the changed file after an apply, and "Ask again on the new revision", are limited by the allocation left on this deployment.</strong> On 2026-10-16 the job allocation for re-reading files (<code>extraction</code>) and for the "ask again" answer (<code>gap.answer</code>) showed <strong>0 jobs remaining</strong>. Expect the refusal "The approved allocation for this kind of AI action is used up". You can still go all the way to <strong>Apply</strong>, but <strong>stage 9 "Verification and knowledge update"</strong> and <strong>stage 11 "Ask again on the new revision"</strong> may not complete, and the change then stays "applied, not verified". Adding allocation is the project owner's decision; this guide does not offer a way around it.</li>
+<li><strong>Every AI step is metered.</strong> Each account may start at most <strong>12 AI jobs per day</strong>, and a chat conversation at most 6 AI replies. When the project budget, an allocation or the evaluation window (open until <strong>2026-11-06 15:59 UTC</strong>) is used up, Ripple refuses at once and charges nothing.</li>
+<li><strong>Concurrency:</strong> the workspace allows only a few jobs to run or wait at the same time. If you see "Jobs are already running or waiting in this workspace up to its limit", wait for the page to update and press the button again. Nothing is lost.</li>
+</ul>
+<h2>Part I - Guided example (the same change as in the one-role guide)</h2>
+<p><strong>Snapshot used for this example:</strong> read on 2026-10-16 (server, by the project team): source revision <code>rev-apply-ui-apply-dfcd1335eef248c0</code>, decision epoch 3, 13 files, rule <code>routing_rules.standard_manager_threshold_jpy</code> = <strong>500,000</strong>. If you read a different value, skip to Part II: the steps stay the same.</p>
+<p>Each line names the <strong>account</strong>, what it does and who is next. "Wait" means: the page updates by itself; continue only when the stated sign appears.</p>
 <div class="tw" tabindex="0" role="region" aria-label="Table (scrolls only if the screen is very narrow)"><table>
 <thead>
 <tr>
-<th>Person</th>
-<th>What they do</th>
+<th>#</th>
+<th>Account</th>
+<th>Where and what</th>
+<th>Sign that it is done</th>
+<th>Next</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>1</td>
 <td>Requester</td>
-<td>states the change, confirms it, asks for the draft and the analysis, builds the proposal, runs the review, prepares the approval bundle and applies the approved change</td>
+<td><strong>Explorer</strong>, search <code>approval.yaml</code>, open the rule whose title reads like "Routing rules standard manager threshold jpy". <strong>Value</strong> must be the value you plan to change (no currency is shown there).</td>
+<td>you have read the current value</td>
+<td>Requester</td>
 </tr>
 <tr>
-<td>Knowledge owner</td>
-<td>decides open points and accepts the updated knowledge</td>
+<td>2</td>
+<td>Requester</td>
+<td>Left menu <strong>Overview</strong>, then <strong>Changes</strong> (always from another page, so the conversation is new). In stage 1, paste the request text from the section "The request to type" of the <a href="one-role-guide.html">one-role guide</a> (if your value differs, write the same sentence with your current and new values). Click <strong>Send</strong> (Enter also sends).</td>
+<td>card "This is what I understood" with current and new values you intended</td>
+<td>Requester</td>
 </tr>
 <tr>
-<td>Reviewer</td>
-<td>reads the proposal and its evidence and may add a note</td>
+<td>3</td>
+<td>Requester</td>
+<td>If a check box appears (assumptions / left out), tick it. Click <strong>Yes, this is what I mean</strong>, then <strong>Confirm intent</strong>.</td>
+<td>stage 1 status <strong>Confirmed</strong></td>
+<td>Requester</td>
 </tr>
 <tr>
+<td>4</td>
+<td>Requester</td>
+<td>Stage 2: <strong>Generate GenAI draft</strong>. Wait. Read "Draft status" (Partly processed is normal), the <strong>Proposed edit</strong> for <code>approval.yaml</code> and the open points.</td>
+<td>job Done, one Proposed edit</td>
+<td>Requester</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Requester</td>
+<td>Stage 3: <strong>Run impact analysis</strong>, then <strong>Run simulation</strong>. Read the numbers of <strong>this</strong> run. Optional: <strong>Ask the AI to read this simulation (uses the paid model)</strong>.</td>
+<td>simulation Done</td>
+<td>Requester</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Requester</td>
+<td>Stage 4: check the <code>approval.yaml</code> edit is ticked (it is by default), click <strong>Prepare the proposal with the ticked edits</strong>.</td>
+<td>diff shown; Next card: "Waiting for: An approver (not the requester)"</td>
+<td><strong>Approver</strong></td>
+</tr>
+<tr>
+<td>7</td>
 <td>Approver</td>
-<td>states the check that must hold after the change, approves, and accepts the result</td>
+<td>Sign in with the Approver account. <strong>Overview</strong>, in <strong>My work</strong> open the item (or use the Requester's <strong>Copy request link</strong> from the "Your request" card). Stage 5 "Check after the change": read the suggested check, click <strong>Confirm these checks</strong>.</td>
+<td>stage 5 shows the check confirmed</td>
+<td><strong>Requester</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Requester</td>
+<td>Stage 6: <strong>Run review</strong>. Wait.</td>
+<td>review Done</td>
+<td>Requester (Reviewer may add a note)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Reviewer (optional)</td>
+<td>Open the same change. In the review area, write a note and click <strong>Mark ready for approval</strong>, or <strong>Ask for changes</strong> (this blocks the approval until the Reviewer marks it ready again).</td>
+<td>no open "asked for changes"</td>
+<td>Requester</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Requester</td>
+<td>Stage 7: <strong>Prepare approval bundle</strong>. Wait.</td>
+<td>bundle Done</td>
+<td><strong>Approver</strong></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Approver</td>
+<td>Stage 7: read the decision basis, type a <strong>Decision reason</strong>, click <strong>Approve</strong> (or <strong>Reject</strong>). Approving applies nothing.</td>
+<td>decision Approved</td>
+<td><strong>Requester</strong></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Requester</td>
+<td>Stage 8: <strong>Apply approved change</strong>. Wait. This is the first step that edits the source file.</td>
+<td>apply Done; the source revision changed</td>
+<td>System, then Admin and Approver</td>
+</tr>
+<tr>
+<td>13</td>
+<td>(system)</td>
+<td>Stage 9 re-reads the changed file and updates the knowledge. See <strong>Current limits</strong> above: it may not complete.</td>
+<td>"Where this change stands"</td>
+<td>Admin</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Admin</td>
+<td>Stage 9: <strong>Accept knowledge candidate</strong> when it is offered.</td>
+<td>knowledge accepted</td>
+<td><strong>Approver</strong></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Approver</td>
+<td>Stage 10: choose for every group shown, give reasons where asked, click <strong>Accept result</strong> (or <strong>Request changes</strong> / <strong>Reject result</strong>). The result is complete only when a person decides.</td>
+<td>result decision recorded</td>
+<td>Requester</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Requester</td>
+<td>Stage 11: type a question, click <strong>Ask on the new revision</strong> (limited, see above).</td>
+<td>answered, or refused with the allocation message</td>
+<td>-</td>
 </tr>
 </tbody>
 </table></div>
-<p>Nobody can approve their own request; the server checks that. Applying changes the source of the workspace used, so the values you start from are whatever that workspace holds at the time.</p>
-<h2>Guided example and continued exploration</h2>
-<ul>
-<li><strong>Guided example:</strong> one specific starting value and request, as in the <a href="one-role-guide.html">one-role guide</a>, used while the workspace is still at that value.</li>
-<li><strong>Continued exploration:</strong> after a change has been applied, follow the same workflow with the current value and a new request; the numbers will differ from any example. Nothing is reset between runs, and earlier requests, decisions and history stay visible.</li>
-</ul>
-<h2>Starting a further run</h2>
+<p>Optional extra step 4b (Admin): in stage 2, the <strong>Open points to answer</strong>: type the answer and a reason, click <strong>Confirm this answer as a decision</strong>. This marks the draft out of date; the Requester then clicks <strong>Revise this draft with confirmed feedback (uses the paid model)</strong> and repeats steps 5 and 6. A decision belongs to the request it was made for; a new request does not inherit it.</p>
+<p>You do not type keys, YAML or ids anywhere: the pages prefill them. Nobody can approve a request they made themselves; the server checks accounts, not roles.</p>
+<h2>Part II - Continued exploration (any later run, any starting value)</h2>
 <ol>
-<li>Read the current value first (<strong>Explorer</strong>, then the rule; its <strong>Value</strong> and <strong>Taken from</strong> tell you what it is now). The Technical view shows the current source revision.</li>
-<li>Open <strong>Changes</strong> from another page, so the conversation is new. Your own earlier requests are listed in <strong>My work</strong>; do not open someone else's.</li>
-<li>Write the request with the <strong>current</strong> value and the new value you want. Check the AI's preview ("This is what I understood") before confirming.</li>
-<li>Read the simulation of this run as it is; do not expect numbers from an earlier run.</li>
-<li>A draft or proposal made before the source changed is marked out of date. Ask for a new draft instead of using it.</li>
-<li>The <strong>Next</strong> card at the top of the Changes page and the row <strong>Where this change is</strong> name the person who has to act next.</li>
+<li><strong>Check the baseline first</strong>, even on your first visit: someone may already have applied a change. Explorer, search <code>approval.yaml</code>, open the rule, read <strong>Value</strong>. In the Technical view (top right) the header shows the current <strong>Source revision</strong>.</li>
+<li>Start a <strong>new request</strong> from <strong>Changes</strong> reached from another page. Do not open a request that is not yours: <strong>My work</strong> lists the items waiting for the account you are signed in with.</li>
+<li>Write the request with the <strong>current</strong> value and a new value you choose. Read the AI's preview before you confirm; the AI may ask a question or word things differently, and you must not confirm a preview that has a wrong number.</li>
+<li>Read the simulation of <strong>this</strong> run as it is. How many cases change depends on the current value; do not expect the numbers of any example.</li>
+<li>Follow the same accounts and steps as in Part I.</li>
+<li><strong>Out of date:</strong> if the source changed after your draft or proposal (someone applied), the page says so and an old approval cannot be used. Ask for a new draft ("Generate GenAI draft" again, or "Revise this draft…") instead.</li>
+<li><strong>Partly processed (PARTIAL):</strong> not a failure. It means some sources stay with people; they remain listed as unresolved or potentially affected and are <strong>not</strong> treated as resolved.</li>
+<li><strong>Verification and acceptance:</strong> an apply is not "done" until stage 9 has re-read the changed file and a person has accepted the knowledge and the result.</li>
+<li><strong>Several people at once:</strong> each request has its own chain. If one change is applied, the others become out of date and need a new draft. If the page says jobs are waiting up to the workspace limit, wait and press the button again.</li>
+<li><strong>Do not restore</strong> an earlier version to match an example. Restore is a separate administration step with its own approval and is not part of this workflow.</li>
 </ol>
-<h2>Follow the recorded case in the meantime (read-only)</h2>
-<p>With a judge account you can read and follow the evidence of <a href="four-role-case.html">the recorded case</a>; you do not repeat its approve and apply steps.</p>
+<h2>Part III - Administrator checks (optional; not part of the business workflow)</h2>
+<p>The Admin account can also try the administration functions. They are <strong>shared</strong>: the same system, workspace and service serve every judge and every other account.
+- <strong>AI and processing switches</strong> (Support &amp; Access, card "AI and processing switches"). Two switches: <strong>New AI starts</strong> and <strong>Job processing</strong>. They are <strong>service-wide</strong>, not per workspace or per account.
+  - <em>Switch OFF</em> "New AI starts": every new AI action of every user is refused with "AI actions are switched off on this server (by the operator)". Nothing is started or charged; saved results stay readable.
+  - <em>Switch OFF</em> "Job processing": queued jobs wait and are not lost; jobs already running finish.
+  - The header banner shows "New AI starts: ON/OFF - Job processing: ON/OFF" for every signed-in user, and the switch history lists who changed it and why.
+  - <strong>To turn it back on:</strong> Support &amp; Access, same card, type a reason of at least 10 characters, click <strong>Switch ON</strong> for each switch that is OFF. The banner returns to ON (it refreshes about every 30 seconds) and waiting jobs are picked up within seconds; a job left waiting is recovered by the periodic wake-up within a few minutes.
+  - Switching off blocks every other judge until you switch it on again. At the end of the evaluation window the system closes the switches itself.
+- <strong>Members</strong> (Support &amp; Access): reading the member list, and per-member AI use. A change affects that account for everyone using it.
+- Allocation and budget are <strong>not</strong> something a screen can raise; do not treat a refusal as a step to work around.</p>
+<h2>Follow the recorded case (read-only)</h2>
+<p>With any account you can read and follow the evidence of <a href="four-role-case.html">the recorded case</a>; you do not repeat its approve and apply steps.</p>
 <div class="tw" tabindex="0" role="region" aria-label="Table (scrolls only if the screen is very narrow)"><table>
 <thead>
 <tr>
@@ -95,5 +211,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>Opening a stored result never starts an AI job. If the page shows "not started" you opened it without the full link: use <strong>My work</strong> or the Changes chooser instead of typing ids.</p></main>
+<p>Opening a stored result never starts an AI job. If the page shows "not started" you opened it without the full link: use <strong>My work</strong> or the Changes chooser instead of typing ids.</p>
+<h2>What this guide does and does not claim</h2>
+<p>Steps and labels come from the pages of the deployed version. <strong>Not verified by a live run of all four accounts</strong>: the exact on-screen wording at each step, and whether stages 9 and 11 complete under the current allocation. Offline tests with stub providers show the wiring and the permission rules only; they are not evidence of live results. The recorded case remains a past run whose <strong>final acceptance is still pending</strong>.</p></main>
 <footer><p>Read-only documentation. It calls no Ripple API and no AI. Source: <code>docs/judges/*.md</code> in the repository. This site does not replace the working prototype. Screenshots of this site are QA images of the guide, not product-run evidence.</p></footer></body></html>

@@ -1,6 +1,6 @@
 # Offline evidence for the planned four-role workflow
 
-**Status: a hands-on four-role replay is not self-service; it is available on request only.** This page records offline regression evidence only. It is not a live run, not human acceptance, and it says nothing about cloud cost, quota or readiness of any workspace.
+**Status: the four-role workflow is offered to judges as an optional, self-driven path with four accounts provided separately.** This page records offline regression evidence only. It is not a live run, not human acceptance, and it says nothing about cloud cost, quota or readiness of any workspace.
 
 Both tests run on a disposable local PostgreSQL with stub providers (no cloud, no AI call). They need `PITCH_BRIEF_TEST_DSN` and, for the browser test, `UI_BASE=app-next`. Without them the tests are skipped, and a skip is not a pass.
 
