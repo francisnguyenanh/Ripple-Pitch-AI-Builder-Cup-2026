@@ -1,7 +1,7 @@
 {
  "source_commit": "8d5523264ed1c9b4ebfdfa0dea0d621f5114dd05",
  "file_count": 1076,
- "overall_sha256": "90866dd205d8b65a92d693ab2eb6358bcaa0638c06cb1ab4c70fed3fa0017d7c",
+ "overall_sha256": "5d8d85dfe6a7c15c90a4861a064bf4c3a1ec47ec5e80644a4e0197f82f229e7f",
  "image_digest": "TBD",
  "files": [
   {
@@ -1229,21 +1229,21 @@
   },
   {
    "path": "docs/judges/FOUR_ROLE_REPLAY_GUIDE.md",
-   "size": 12151,
-   "sha256": "121ae7e67aad8715168757dbb99ef40206c2fc180c882e41736e080c848570d8",
-   "sha256_lf": "121ae7e67aad8715168757dbb99ef40206c2fc180c882e41736e080c848570d8"
+   "size": 13114,
+   "sha256": "7e58bee52bf0b3f6683e04b8315001e866da30fb12a5dedf13535dc946be2094",
+   "sha256_lf": "7e58bee52bf0b3f6683e04b8315001e866da30fb12a5dedf13535dc946be2094"
   },
   {
    "path": "docs/judges/SINGLE_ROLE_GUIDE.md",
-   "size": 16950,
-   "sha256": "1f53b304ebc356c6cf10cef8fd8617f4d60e5bd51a4d9421f646c6d7f471e9a7",
-   "sha256_lf": "df0c60d5ef1dd99730d298bf8985a56638bd84962e8e2b9c1dcb088b69e20693"
+   "size": 17072,
+   "sha256": "c76b1caa9e7647415b70b4120b7d1b4b6e46f41f32ac64c1e9957b523fbcaac6",
+   "sha256_lf": "f1e7a1017b551f5b2ae6b3f68c34ed77d9e72a4de1015f355947c553be63197a"
   },
   {
    "path": "docs/judges/START_HERE.md",
-   "size": 8345,
-   "sha256": "625802e1d82cde5c93ce1ce3c395c3fab47e3bf1a58ecf532770234f2051dcaa",
-   "sha256_lf": "dc17419e759586021c7e21702ffcda293c4f823576b4705741a15a2bbd916cb5"
+   "size": 8444,
+   "sha256": "3c995e5dfbf7fc5dd4e228160425f2369f42b6b09830af7c351da047685f985b",
+   "sha256_lf": "438d95f086fcd45e6994a6626e012dcc36cc13787853709d9005722773969eab"
   },
   {
    "path": "docs/judges/VERIFIED_FOUR_ROLE_CASE.md",
@@ -4269,9 +4269,9 @@
   },
   {
    "path": "site/judges/four-role-replay.html",
-   "size": 16334,
-   "sha256": "783cf06620c516666d7db42b49caf304f9625ed0d942f6b98effec63e317895e",
-   "sha256_lf": "83d6b76793d877319bdc2071ede93e89836f630b3a254c7f8317f17d363df953"
+   "size": 17411,
+   "sha256": "ba074b6584e139f7ca98248bbde8894150e14601ea4df9acda0952db580e301e",
+   "sha256_lf": "a49f61ee8d007011293280e0331231cc8e67ad9574ad0c73f235ad55c228253d"
   },
   {
    "path": "site/judges/img/ask_again_abstained.png",
@@ -4290,15 +4290,15 @@
   },
   {
    "path": "site/judges/index.html",
-   "size": 14668,
-   "sha256": "120818f32722444640cf483ed4cc1caba7c11c6832167585c257b9a62ff27daf",
-   "sha256_lf": "9e8282a65224cd6d1c6ca441b53da1c4bd21c662bc5d94d744ad82229c53aa21"
+   "size": 14767,
+   "sha256": "8fa79a8f71de1e342352429b058597c1b5b8a6aa79192ee7b8b6c60982c8bb0c",
+   "sha256_lf": "8acd8d06f6f0048dbdf3357f8cd12264e67d5783b2f8c8bf16a208fb4df5278c"
   },
   {
    "path": "site/judges/one-role-guide.html",
-   "size": 26349,
-   "sha256": "300466f48ab2ca23eb54761cd7df15eb2fe3fb6d705363989fb1c3dade8302f8",
-   "sha256_lf": "4151e15eab41665bad72bdc5a27d894bbad36cc4fb95d700237b424a93d15af2"
+   "size": 26493,
+   "sha256": "b5f0773413d041cd9823be9f86c382541810f44729db39b5ed44e24f8ad37610",
+   "sha256_lf": "9da81bc80f7d9fc31705c13005faf80daa59e274b2d80f0f6b7f4289c7b8228d"
   },
   {
    "path": "site/judges/site.js",

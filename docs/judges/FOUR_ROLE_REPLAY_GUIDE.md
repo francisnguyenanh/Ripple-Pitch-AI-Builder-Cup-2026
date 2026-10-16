@@ -6,10 +6,8 @@ You switch between **four accounts that you receive separately** (never written 
 
 Your recommended path is still the [one-role demo](one-role-guide.html). The [recorded case](four-role-case.html) is the read-only evidence of an earlier run of this same workflow (a different rule and baseline).
 
-## Current limits of this deployment (read on 2026-10-16, server side; they can change)
-- **Re-reading the changed file after an apply, and "Ask again on the new revision", are limited by the allocation left on this deployment.** On 2026-10-16 the job allocation for re-reading files (`extraction`) and for the "ask again" answer (`gap.answer`) showed **0 jobs remaining**. Expect the refusal "The approved allocation for this kind of AI action is used up". You can still go all the way to **Apply**, but **stage 9 "Verification and knowledge update"** and **stage 11 "Ask again on the new revision"** may not complete, and the change then stays "applied, not verified". Adding allocation is the project owner's decision; this guide does not offer a way around it.
-- **Every AI step is metered.** Each account may start at most **12 AI jobs per day**, and a chat conversation at most 6 AI replies. When the project budget, an allocation or the evaluation window (open until **2026-11-06 15:59 UTC**) is used up, Ripple refuses at once and charges nothing.
-- **Concurrency:** the workspace allows only a few jobs to run or wait at the same time. If you see "Jobs are already running or waiting in this workspace up to its limit", wait for the page to update and press the button again. Nothing is lost.
+## Shared AI limits - read this first
+All AI steps use **one shared budget**. An extra allowance for this path was added on **2026-10-16**, aimed at about **one to two** four-role runs. **The number of runs that complete is not guaranteed.** Clarifications, a revised draft, extra questions and a wide re-read use it up faster. When a limit is reached Ripple shows the reason and charges nothing. Do not switch accounts or try to reset anything to get around it; if you cannot continue, read the stored results or the [recorded case](four-role-case.html) (reference material, not a completed run of yours). Details are in Part IV.
 
 ## Part I - Guided example (the same change as in the one-role guide)
 **Snapshot used for this example:** read on 2026-10-16 (server, by the project team): source revision `rev-apply-ui-apply-dfcd1335eef248c0`, decision epoch 3, 13 files, rule `routing_rules.standard_manager_threshold_jpy` = **500,000**. If you read a different value, skip to Part II: the steps stay the same.
@@ -61,6 +59,14 @@ The Admin account can also try the administration functions. They are **shared**
   - Switching off blocks every other judge until you switch it on again. At the end of the evaluation window the system closes the switches itself.
 - **Members** (Support & Access): reading the member list, and per-member AI use. A change affects that account for everyone using it.
 - Allocation and budget are **not** something a screen can raise; do not treat a refusal as a step to work around.
+
+## Part IV - The limits in detail
+- **Per account:** at most 12 AI jobs per day; a chat conversation at most 6 AI replies.
+- **Per step (allowances, shared):** the re-read of the changed file after an apply (`extraction`) and the "Ask on the new revision" answer (`gap.answer`) each have a small allowance; the draft, the simulation reading and the chat have larger ones. The project budget caps everything together.
+- **Re-read after an apply:** normally one file (the changed one). It can cover all 13 files when the earlier readings lack their relation coverage, and it did so once in this workspace. A wide re-read is **not** covered by the extra allowance: the first files are read and the rest are refused.
+- **If the allowance runs out after you applied:** the source file **is** already changed (an apply is not undone). Say what the page shows, no more and no less: if the machine check of the changed file passed but the re-read did not finish, the state is **"Applied and machine-verified; knowledge refresh incomplete"**; the knowledge is then not fully updated and the result still needs a person's decision. Do not call it rolled back, fully verified or fully updated.
+- **While something is pending:** a job shows "Waiting to run" or "Running" and the page updates by itself; a refused action shows the reason (for example "The approved allocation for this kind of AI action is used up"). Saved results stay readable.
+- **Also shared:** the number of jobs allowed to run at once in the workspace, the administrator switches (Part III) and the evaluation window (open until **2026-11-06 23:59:59 SGT** = 15:59:59 UTC).
 
 ## Follow the recorded case (read-only)
 With any account you can read and follow the evidence of [the recorded case](VERIFIED_FOUR_ROLE_CASE.md); you do not repeat its approve and apply steps.
