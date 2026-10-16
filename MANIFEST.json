@@ -1,7 +1,7 @@
 {
  "source_commit": "8d5523264ed1c9b4ebfdfa0dea0d621f5114dd05",
  "file_count": 1076,
- "overall_sha256": "5d8d85dfe6a7c15c90a4861a064bf4c3a1ec47ec5e80644a4e0197f82f229e7f",
+ "overall_sha256": "8598ba104eaa13f9a57c735214b4cd590785eabe6263e16ba0754a9c68eb10f3",
  "image_digest": "TBD",
  "files": [
   {
@@ -1229,9 +1229,9 @@
   },
   {
    "path": "docs/judges/FOUR_ROLE_REPLAY_GUIDE.md",
-   "size": 13114,
-   "sha256": "7e58bee52bf0b3f6683e04b8315001e866da30fb12a5dedf13535dc946be2094",
-   "sha256_lf": "7e58bee52bf0b3f6683e04b8315001e866da30fb12a5dedf13535dc946be2094"
+   "size": 13738,
+   "sha256": "4668deebb02fef325b75acd2a714cd77d66d7fc2a09ba32b6aeda8819387ece7",
+   "sha256_lf": "4668deebb02fef325b75acd2a714cd77d66d7fc2a09ba32b6aeda8819387ece7"
   },
   {
    "path": "docs/judges/SINGLE_ROLE_GUIDE.md",
@@ -4269,9 +4269,9 @@
   },
   {
    "path": "site/judges/four-role-replay.html",
-   "size": 17411,
-   "sha256": "ba074b6584e139f7ca98248bbde8894150e14601ea4df9acda0952db580e301e",
-   "sha256_lf": "a49f61ee8d007011293280e0331231cc8e67ad9574ad0c73f235ad55c228253d"
+   "size": 18145,
+   "sha256": "2814a5dfd67907c885a7d22c9383d864cc9f7948e5154e827c6c1d878f9179e8",
+   "sha256_lf": "7825e970ee19ef06835179842420a052681f6046f220a72a9c9e4051e7a85b28"
   },
   {
    "path": "site/judges/img/ask_again_abstained.png",
