@@ -2,7 +2,7 @@
 
 **Ripple is a change-coordination layer for the business rules that live inside existing systems.** A person states a rule change in plain words; Ripple restates it, finds the evidence in the sources, shows what would change and what stays unresolved, measures the effect by running the real program, and then hands the decision to people. AI understands, asks and drafts; deterministic code checks and executes; people clarify, approve and accept.
 
-> **Status in one paragraph.** This repository is a working prototype of **Phase 1 — Prove the Loop**: the mechanism is demonstrated end to end on **one bounded, reproducible sample system (Harbor)**. It is not a production system, it is not validated beyond Harbor, and the one held-out evaluation of the AI-assisted analysis stages (snapshot 2026-10-02) **did not reach its targets** (see [Evidence, limitations and future work](#12-evidence-limitations-and-future-work)). **Phase 2 — Scale the Intelligence** (wider coverage, better AI quality, domain integration, user validation) is proposed, not built.
+> **Status in one paragraph.** This repository is a working prototype of **Phase 1 — Prove the Loop**: the mechanism is demonstrated end to end on **one bounded, reproducible sample system (Harbor)**. It is not a production system, it is not validated beyond Harbor, and the one held-out evaluation of the AI-assisted analysis stages (snapshot 2026-10-02) **did not reach its targets** (see [Evidence, limitations and future work](#12-evidence-limitations-and-future-work)). **Phase 2 — Scale the Intelligence** (wider coverage, better AI quality, domain integration, user validation) is under active development in a separate [development preview repository](https://github.com/francisnguyenanh/Ripple-finale). Parts of the roadmap are implemented, while quality evaluation, formal acceptance and further integration remain open. This repository remains the official Phase 1 Pitch submission; the separate development work does not change its recorded results.
 
 ## Judge Quick Path
 
@@ -529,7 +529,7 @@ The prototype runs on Google Cloud:
 - No usability study with business users has been run; no customer study exists.
 - Not measured: evidence-reference validity under attack, knowledge freshness, web cold-start time. Provider cost is a price-snapshot estimate, not a bill.
 
-**Future work (proposed, not built).** Phase 2 — *Scale the Intelligence*: wider formats and richer relationships, re-evaluation and improvement of the AI roles against the recorded baseline, domain adapters for real enterprise processes, multi-artifact changes and hand-off to engineers, SSO and audit export, and a usability pilot with business owners. The gap measured above is the first thing to improve in Phase 2: better extraction, relation and conflict results, and a re-evaluation of the current build against the recorded baseline.
+**Future work (in progress in a separate [development preview repository](https://github.com/francisnguyenanh/Ripple-finale); the roadmap is not complete).** Phase 2 — *Scale the Intelligence*: wider formats and richer relationships, re-evaluation and improvement of the AI roles against the recorded baseline, domain adapters for real enterprise processes, multi-artifact changes and hand-off to engineers, SSO and audit export, and a usability pilot with business owners. The gap measured above is the first thing to improve in Phase 2: better extraction, relation and conflict results, and a re-evaluation of the current build against the recorded baseline.
 
 ---
 
